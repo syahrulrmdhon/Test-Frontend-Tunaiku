@@ -4,6 +4,9 @@ import Content from '../wrapper/Content';
 import {Segment,Header,List,Menu,Image,Dropdown,Button,Grid,Container,Input} from 'semantic-ui-react';
 
 class Frontend extends React.Component {
+  componentDidMount(){
+    document.title = "Tunaiku"
+  }
   render() {
     return(
       <div>
