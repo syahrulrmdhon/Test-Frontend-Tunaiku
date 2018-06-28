@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment,Header,List,Menu,Image,Dropdown,Container,Input} from 'semantic-ui-react';
+import {Menu,Image,Dropdown,Container,Input} from 'semantic-ui-react';
 
 class Headers extends React.Component {
     render() {

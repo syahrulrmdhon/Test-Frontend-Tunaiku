@@ -1,7 +1,7 @@
 import React from 'react';
 import Headers from '../wrapper/Headers';
 import Content from '../wrapper/Content';
-import {Segment,Header,List,Menu,Image,Dropdown,Button,Grid,Container,Input} from 'semantic-ui-react';
+import {Segment,Header,List,Image,Grid,Container} from 'semantic-ui-react';
 
 class Frontend extends React.Component {
   componentDidMount(){

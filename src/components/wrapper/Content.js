@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment,Header,List,Menu,Image,Dropdown,Container,Input,Button} from 'semantic-ui-react';
+import {Segment,Header,List,Image,Input,Button} from 'semantic-ui-react';
 
 class Content extends React.Component {
     render() {
