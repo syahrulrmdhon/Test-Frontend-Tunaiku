@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route} from 'react-router-dom';
+import Frontend from './components/pages/Frontend';
+import Favicon from 'react-favicon';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+
+const App = () => <div>
+    <Favicon url="https://raw.githubusercontent.com/syahrulrmdhon/material-design/master/public/favicon2.ico"/>
+    <Route path={process.env.PUBLIC_URL + '/'} exact component={Frontend}/>
+</div>
 
 export default App;
