@@ -1,61 +1,33 @@
 import React from 'react';
-import {Segment,Header,List,Image,Input,Button} from 'semantic-ui-react';
+import {Segment,Header,List,Image,Input,Button,Grid,Container} from 'semantic-ui-react';
 
 class Content extends React.Component {
     render() {
       return(
-        <div>
-        <div style={{ marginTop: '4em' }} className='atas'>
+        <div style={{background:'#f2f2f2' }}>
+        <Container>
+         <Grid divided='vertically' style={{ marginTop: '5em',background:'#f2f2f2' }} >
+          <Grid.Row columns={2}>
+            <Grid.Column stackable style={{padding:'20px'}}>
+            <Segment basic>
+              <p className='h1'>Loremipsumdolorsit amet,consecteturadipi scingelit,seddo</p>
+              <p>amet,consecteturadipi scingelit,seddo eiusmodtemporincididuntutlaboreetdoloremagna aliqua.Utenimadminimveniam,quisnostrud</p>
+                <Button style={{background:'#2d4452',color:'#FFF'}}>
+                    For More Information
+                </Button>
+              </Segment>
+              </Grid.Column>
+            <Grid.Column >
+              <Image style={{padding:'40px',margin:'20px'}} src={require('../assets/section-1-image01.png')}/>
+            </Grid.Column>
+          </Grid.Row>
+         </Grid>
+         </Container>
         <style>{`
-            .besar {
-            font-size: 54px;
-            margin:0 0 0 50px;
+            .h1 {
+              font-size: 54px;
+              margin: 0;
             }
-            .kecil{
-              margin:0 0 0 50px;
-            }
-            .button-info{
-              margin:20px 0 0 50px;
-            }
-        `  }
-        </style>
-          <Segment attached style={{border:'none',background:'#f2f2f2'}}>
-            <Segment attached style={{border:'none',background:'#f2f2f2'}}>
-              <List horizontal relaxed>
-                <List.Item>
-                  <p className='besar'>
-                      Loremipsumdolorsit
-                  </p>
-                  <p className='besar'>
-                      amet,consecteturadipi
-                  </p>
-                  <p className='besar'>
-                      scingelit,seddo
-                  </p>
-                  <p className='kecil'>
-                    eiusmodtemporincididuntutlaboreetdoloremagna
-                  </p>
-                  <p className='kecil'>
-                    aliqua.Utenimadminimveniam,quisnostrud
-                  </p>
-                  <p className='button-info'>
-                    <Button style={{background:'#2d4452',color:'#FFF'}}>
-                      For More Information
-                    </Button>
-                  </p>
-                </List.Item>
-                <List.Item>
-                  <Header style={{margin:'0 0 0 190px'}} >
-                  </Header>
-                </List.Item>
-                <List.Item>
-                  <Image src={require('../assets/section-1-image01.png')}/>
-                </List.Item>
-              </List>
-            </Segment>
-          </Segment>
-        </div>
-        <style>{`
             .tengah{
               margin:20px 0 0 0;
             }
@@ -66,7 +38,7 @@ class Content extends React.Component {
             .content-tengah{
               text-align: center;
               font-size: 14px;
-              max-width: 100px;
+              display: -webkit-box;
             }
         `  }
         </style>
@@ -76,50 +48,47 @@ class Content extends React.Component {
               CupidatatNonProidentSunt
             </p>
             <Segment attached style={{border:'none',background:'#FFF'}} textAlign='center' >
-              <List horizontal relaxed>
-                <List.Item >
-                  <Header as='h1' icon>
-                    <Image src={require('../assets/section-2-image01.png')}/>
-                    <Header.Content>
-                      Excepteursintoccaecat
-                    </Header.Content>
-                  </Header>
-                  <p className='content-tengah'>
-                    laborisnisiutaliquipexeacommodoconsequat.
-                    iruredolorinreprehenderitinvoluptate
-                    doloreeufugiatnullapariatur.
-                  </p>
-                </List.Item>
-                <List.Item style={{margin:'0 0 0 180px'}}>
-                  <Header as='h1' icon>
-                    <Image src={require('../assets/section-2-image02.png')}/>
-                    <Header.Content>
-                      Nemoenimipsam
-                    </Header.Content>
-                  </Header>
-                  <p className='content-tengah'>
-                    quirationevoluptatemsequinesciunt.Nequeporro
-                    quisquamest,quidoloremipsumquiadolor
-                    sitamet,consectetur,adipiscivelit,
-                  </p>
-                </List.Item>
-                <List.Item style={{margin:'0 0 0 180px'}}>
-                  <Header as='h1' icon>
-                    <Image src={require('../assets/section-2-image03.png')}/>
-                    <Header.Content >
-                      Quisautemveleum
-                    </Header.Content>
-                  </Header>
-                  <p className='content-tengah'>
-                      magnamaliquamquaeratvoluptatem.Utenim
-                      adminimaveniam,quisnostrumexercitationem
-                      ullamcorporis
-                  </p>
-                </List.Item>
-              </List>
+              <Container>
+                <Grid divided='vertically' >
+                  <Grid.Row columns={3}>
+                    <Grid.Column>
+                      <Image style={{display:'initial'}} src={require('../assets/section-2-image01.png')}/>
+                      <Header>
+                          Excepteursintoccaecat
+                      </Header>
+                      <p className='content-tengah'>
+                        laborisnisiutaliquipexeacommodoconsequat.
+                        iruredolorinreprehenderitinvoluptate
+                        doloreeufugiatnullapariatur.
+                      </p>
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image style={{display:'initial'}} src={require('../assets/section-2-image02.png')}/>
+                      <Header>
+                          Nemoenimipsam
+                      </Header>
+                      <p className='content-tengah'>
+                        quirationevoluptatemsequinesciunt.Nequeporro
+                        quisquamest,quidoloremipsumquiadolor
+                        sitamet,consectetur,adipiscivelit,
+                      </p>
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image style={{display:'initial'}} src={require('../assets/section-2-image03.png')}/>
+                      <Header>
+                          Quisautemveleum
+                      </Header>
+                      <p className='content-tengah'>
+                          magnamaliquamquaeratvoluptatem.Utenim
+                          adminimaveniam,quisnostrumexercitationem
+                          ullamcorporis
+                      </p>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+              </Container>
             </Segment>
           </Segment>
-          <br /><br /><br /><br /><br /><br />
         </div>
         <style>{`
             .judul-email{
@@ -129,7 +98,7 @@ class Content extends React.Component {
         `  }
         </style>
         <div className='email'>
-          <Segment attached style={{border:'none',background:'#f2f2f2'}} textAlign='center'>
+          <Segment attached style={{border:'none',background:'#f2f2f2',paddingTop: '5em'}} textAlign='center'>
             <p className='judul-tengah'>
               Quisnostrumexercitationemullamcorporis
               suscipitlaboriosasimu,nisiutaliquid?
